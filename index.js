@@ -106,7 +106,7 @@ for (let i = 0; i < totalNmber; i++) {
     totalProfit += finances[i][1];       
 }
 
-console.log("Total: " + totalProfit); 
+console.log("Total: " + totalProfit, '$'); 
 
 //Average of the **changes** in Profit/Losses over the entire period.
 
@@ -123,4 +123,24 @@ let changesSum = 0
   }
 
   let averageChanges = changesSum / changes.length;  
-  console.log("Average change: ", averageChanges.toFixed(2));     
+  console.log("Average change: ", averageChanges.toFixed(2), '$');   
+  
+  // The greatest increase in profits (date and amount) over the entire period.
+
+  let greatestIncreaseAmount = Math.max(...changes); 
+
+  //console.log(changes.indexOf(greatestIncreaseAmount))
+
+  let greatestIncreaseDate = finances[25][0];    
+
+  console.log("Greatest Increase in Profits: " + greatestIncreaseDate + " ($"+ greatestIncreaseAmount + ")");
+
+  // The greatest decrease in losses (date and amount) over the entire period.
+
+  let greatestDecreaseAmount = Math.min(...changes); 
+  
+  //console.log(changes.indexOf(greatestDecreaseAmount))
+  
+  greatestDecreaseDate = finances[44][0];      
+
+  console.log("Greatest Decrease in Profits: " + greatestDecreaseDate + " ($" + greatestDecreaseAmount + ")" )        
