@@ -92,3 +92,8 @@ var finances = [
 console.log("Financial Analysis");        
 console.log("----------------------------");
 
+//Number of months
+    
+let totalNmber = finances.length;        
+console.log("Total Months: " + totalNmber); 
+
