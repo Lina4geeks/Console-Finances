@@ -108,3 +108,19 @@ for (let i = 0; i < totalNmber; i++) {
 
 console.log("Total: " + totalProfit); 
 
+//Average of the **changes** in Profit/Losses over the entire period.
+
+let changes =[]           
+
+let changesSum = 0
+
+
+  for (let i = 0; i < totalNmber-1; i++) {
+
+    changes.push(finances[i+1][1]- finances[i][1]); 
+     
+    changesSum += changes[i];       
+  }
+
+  let averageChanges = changesSum / changes.length;  
+  console.log("Average change: ", averageChanges.toFixed(2));     
