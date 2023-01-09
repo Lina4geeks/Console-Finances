@@ -97,3 +97,14 @@ console.log("----------------------------");
 let totalNmber = finances.length;        
 console.log("Total Months: " + totalNmber); 
 
+//Net total amount
+
+let totalProfit = 0;        
+
+for (let i = 0; i < totalNmber; i++) {
+
+    totalProfit += finances[i][1];       
+}
+
+console.log("Total: " + totalProfit); 
+
